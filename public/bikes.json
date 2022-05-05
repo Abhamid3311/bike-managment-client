@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "INTRUDER ABS FI",
+        "img": "https://www.suzuki.com.bd/images/bike_models/variant_color_images/variant_color_image__158919613785197.png",
+        "manufecturer": "Suzuki",
+        "price": "304,950",
+        "Description": "The INTRUDER 155CC establishes Suzuki in the cruiser segment by giving a unique exposure to Suzuki's international Intruder heritage "
+    },
+    {
+        "id": 2,
+        "name": "INTRUDER ABS",
+        "img": "https://www.suzuki.com.bd/images/bike_models/variant_color_images/variant_color_image__154564749050356.png",
+        "manufecturer": "Suzuki",
+        "price": "275,000",
+        "Description": "The INTRUDER 155CC establishes Suzuki in the cruiser segment by giving a unique exposure to Suzuki's international Intruder heritage  "
+    },
+    {
+        "id": 3,
+        "name": "THE NEW GIXXER",
+        "img": "https://www.suzuki.com.bd/images/bike_models/variant_color_images/variant_color_image__162419185829269.png",
+        "manufecturer": "Suzuki",
+        "price": "244,950",
+        "Description": "The New Gixxer is featured with muscular street bike styling right, the overall ethos of the appearance is premium & stylish. There's a large, sculpted fuel tank that takes center-stage, and the flat, wide handlebars give the New Gixxer a butch stance. "
+    },
+    {
+        "id": 4,
+        "name": "NEW GIXXER SF",
+        "img": "https://www.suzuki.com.bd/images/bike_models/variant_color_images/variant_color_image__162419216230992.png",
+        "manufecturer": "Suzuki",
+        "price": "291,950",
+        "Description": "The All-New Gixxer SF 155, from the makers of Hayabusa and GSX-R, comes the latest from a lineage of legends. The generational update makes the Suzuki Gixxer SF look more premium and sportier than before. It gets edgier styling, clip-on handlebars, and a split seat to complete the effect. "
+    },
+    {
+        "id": 5,
+        "name": "The Suzuki GSX-R Dual",
+        "img": "https://www.suzuki.com.bd/images/bike_models/variant_color_images/variant_color_image__160682555276344.png",
+        "manufecturer": "Suzuki",
+        "price": "390,000",
+        "Description": "GSX-R Dual ABS is designed to be light and the best performing motorcycle in its class, in an unbeatable package. Meet the revolutionary Suzuki GSX-R150 Dual ABS with the best power-to-weight ratio and acceleration in the 147.3 cm3 class, plus nimble handling and great fuel economy. "
+    },
+    {
+        "id": 6,
+        "name": "CVO ROAD GLIDE LIMITED",
+        "img": "https://i.ibb.co/vszR6Rs/my22-pan-america-1x1.webp",
+        "manufecturer": "Harley-Davidson",
+        "price": "304,950",
+        "Description": "Loaded with luxury and long-haul comfort, head-turning style and power that always satisfies, makes this new model a joy to ride. "
+    },
+    {
+        "id": 7,
+        "name": "PAN AMERICA 1250 SPECIAL",
+        "img": "https://i.ibb.co/RTMYyqL/cvo-road-glide-limited-hero-card-3-up.jpg",
+        "manufecturer": "Harley-Davidson",
+        "price": "304,950",
+        "Description": "Our premiere edition makes its follow-up debut in Fastback Blue/White Sand. "
+    },
+    {
+        "id": 8,
+        "name": "LOW RIDER™ ST",
+        "img": "https://i.ibb.co/Pxktc2V/low-rider-st-hero-card-1x1.webp",
+        "manufecturer": "Harley-Davidson",
+        "price": "304,950",
+        "Description": "Legendary style in a new performance bagger package, with an all-new fairing design and a powerful Milwaukee Eight™ 117 engine. "
+    },
+    {
+        "id": 9,
+        "name": "Hero Xtreme Sports Single Disc",
+        "img": "https://www.motorcyclebd.com/images/bikes/Hero-Xtreme-Sports-Single-Disc.jpg",
+        "manufecturer": "Hero Honda",
+        "price": "1,74,900",
+        "Description": "Hero Xtreme Sports Single Disc Bike Price in BD 2022. Which Engine Type is Air Cooled, 4 - Stroke Single Cylinder OHC. This bike is powered by the 149.20 ccEngine. Hero Xtreme Sports Single Disc Generates Maximum Power 15.6 bhp @ 8500 rpm. It's Maximum Torque is 13.50 NM @ 7000 rpm. "
+    },
+    {
+        "id": 10,
+        "name": "Yamaha R15 V4 Racing Blue",
+        "img": "https://www.motorcyclebd.com/images/bikes/Yamaha-R15-V4-Racing-Blue.jpg",
+        "manufecturer": "Yamaha",
+        "price": " 5,45,000",
+        "Description": "Yamaha R15 V4 Racing Blue Bike Price in BD 2022. Which Engine Type is 155cc, Liquid-Cooled, 4-Stroke, SOHC, 4-Valve, VVA Engine. This bike is powered by the 155.00 ccEngine. Yamaha R15 V4 Racing Blue Generates Maximum Power 18.4 HP @ 10,000 rpm. It's Maximum Torque is 14.2 Nm @ 7,500 rpm."
+    }
+]
