@@ -11,7 +11,7 @@ const Inventory = () => {
     }, []);
     return (
         <div>
-            <h2>Inventory: {bikes.length}</h2>
+            <h1 className='text-center text-primary my-5'>Our Collections</h1>
             <div className='bikes-container'>
                 {
                     bikes.map(bike => <Bike
