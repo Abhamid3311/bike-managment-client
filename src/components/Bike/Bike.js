@@ -1,9 +1,9 @@
 import React from 'react';
-import { Button, Card, ListGroup } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 import './Bike.css';
 
-const Bike = ({ bike }) => {
-    const { name, img, manufecturer, price, Description } = bike;
+const Bike = ({ bike, handleUpdateBtn }) => {
+    const { id, name, img, manufecturer, price, Description } = bike;
     return (
         <div >
             <Card className='bike-card'>
@@ -16,7 +16,7 @@ const Bike = ({ bike }) => {
                         <h5 className='text-danger mt-2'>Price: {price} BDT</h5>
                     </Card.Text>
 
-                    <Button className='update-btn' variant="success">Update</Button>
+                    <Button onClick={() => handleUpdateBtn(id)} className='update-btn' variant="success">Update</Button>
                 </Card.Body>
             </Card>
         </div >

@@ -9,6 +9,9 @@ const Inventory = () => {
             .then(res => res.json())
             .then(data => setBikes(data))
     }, []);
+    const handleUpdateBtn = id => {
+        console.log("clicked", id);
+    }
     return (
         <div>
             <h1 className='text-center text-success my-5'>Our Collections</h1>
@@ -17,6 +20,7 @@ const Inventory = () => {
                     bikes.map(bike => <Bike
                         key={bike.id}
                         bike={bike}
+                        handleUpdateBtn={handleUpdateBtn}
                     ></Bike>).slice(0, 6)
                 }
             </div>
