@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <Navbar collapseOnSelect sticky='top' expand="lg" bg="primary" variant="dark">
+        <Navbar collapseOnSelect sticky='top' expand="lg" bg="success" variant="dark">
             <Container>
                 <Navbar.Brand as={Link} to='/home'>Dream Bike</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -13,6 +13,7 @@ const Header = () => {
                         <Nav.Link as={Link} to='/home'>Home</Nav.Link>
                         <Nav.Link as={Link} to='/inventory'>Inventory</Nav.Link>
                         <Nav.Link as={Link} to='/allinventory'>All Inventory</Nav.Link>
+                        <Nav.Link as={Link} to='/blogs'>Blogs</Nav.Link>
 
                         <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

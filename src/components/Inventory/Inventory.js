@@ -11,7 +11,7 @@ const Inventory = () => {
     }, []);
     return (
         <div>
-            <h1 className='text-center text-primary my-5'>Our Collections</h1>
+            <h1 className='text-center text-success my-5'>Our Collections</h1>
             <div className='bikes-container'>
                 {
                     bikes.map(bike => <Bike

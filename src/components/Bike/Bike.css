@@ -5,6 +5,11 @@
     border-radius: 10px;
 }
 
+.bike-card img {
+    width: 350px;
+    height: 350px;
+}
+
 .update-btn {
     position: absolute;
     bottom: 0;

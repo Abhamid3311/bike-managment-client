@@ -16,7 +16,7 @@ const Bike = ({ bike }) => {
                         <h5 className='text-danger mt-2'>Price: {price} BDT</h5>
                     </Card.Text>
 
-                    <Button className='update-btn' variant="primary">Update</Button>
+                    <Button className='update-btn' variant="success">Update</Button>
                 </Card.Body>
             </Card>
         </div >
