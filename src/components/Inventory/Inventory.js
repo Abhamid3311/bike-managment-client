@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import useBikes from '../../hooks/useBikes';
 import Bike from '../Bike/Bike';
 import './Inventory.css';
 
 const Inventory = () => {
-    const [bikes, setBikes] = useState([]);
-    useEffect(() => {
-        fetch('bikes.json')
-            .then(res => res.json())
-            .then(data => setBikes(data))
-    }, []);
+    const [bikes, setBikes] = useBikes();
+    const navigat = useNavigate();
+
     const handleUpdateBtn = id => {
         console.log("clicked", id);
+        navigat('/bikedetails');
     }
     return (
         <div>
