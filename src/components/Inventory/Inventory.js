@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useBikes from '../../hooks/useBikes';
 import Bike from '../Bike/Bike';
@@ -10,7 +9,10 @@ const Inventory = () => {
 
     const handleUpdateBtn = id => {
         console.log("clicked", id);
-        navigat('/bikedetails');
+        navigat(`/inventory/${id}`);
+    }
+    const handleAllBike = () => {
+        navigat('/allinventory')
     }
     return (
         <div>
@@ -18,12 +20,13 @@ const Inventory = () => {
             <div className='bikes-container'>
                 {
                     bikes.map(bike => <Bike
-                        key={bike.id}
+                        key={bike._id}
                         bike={bike}
                         handleUpdateBtn={handleUpdateBtn}
                     ></Bike>).slice(0, 6)
                 }
             </div>
+            <button className='btn btn-lg btn-success' onClick={handleAllBike}>See All Bikes</button>
 
         </div>
     );

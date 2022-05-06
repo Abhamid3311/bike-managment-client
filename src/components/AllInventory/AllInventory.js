@@ -1,17 +1,18 @@
 import React from 'react';
 import useBikes from '../../hooks/useBikes';
-import Bike from '../Bike/Bike';
+import AllInventoryBike from '../AllInventoryBike/AllInventoryBike';
+import './AllInventory.css';
 
 const AllInventory = () => {
     const [bikes, setBikes] = useBikes();
     return (
         <div>
-            <div className='bikes-container'>
+            <div className='allInventory-container'>
                 {
-                    bikes.map(bike => <Bike
-                        key={bike.id}
+                    bikes.map(bike => <AllInventoryBike
+                        key={bike._id}
                         bike={bike}
-                    ></Bike>)
+                    ></AllInventoryBike>)
                 }
             </div>
         </div>
