@@ -11,6 +11,7 @@ import SignUp from './components/SignUp/SignUp';
 import AllInventory from './components/AllInventory/AllInventory';
 import Blogs from './components/Blogs/Blogs';
 import BikeDetails from './components/BikeDetails/BikeDetails';
+import AddInventoryItem from './components/AddInventoryItem/AddInventoryItem';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/inventory/:id' element={<BikeDetails></BikeDetails>}></Route>
         <Route path='/allinventory' element={<AllInventory></AllInventory>}></Route>
 
+        <Route path='/additem' element={<AddInventoryItem></AddInventoryItem>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>

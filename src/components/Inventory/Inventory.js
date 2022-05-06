@@ -26,7 +26,7 @@ const Inventory = () => {
                     ></Bike>).slice(0, 6)
                 }
             </div>
-            <button className='btn btn-lg btn-success' onClick={handleAllBike}>See All Bikes</button>
+            <button className='btn btn-lg btn-success' onClick={handleAllBike}>Manage Inventories</button>
 
         </div>
     );

@@ -1,8 +1,9 @@
 import React from 'react';
 import './AllInventoryBike.css';
 
-const AllInventoryBike = ({ bike }) => {
+const AllInventoryBike = ({ bike, handleAddItem }) => {
     const { _id, name, img, manufecturer, price, Description, quantity } = bike;
+
     return (
         <div className='w-50 mx-auto '>
             <div className='d-flex  my-3 inventory-card'>
@@ -10,6 +11,7 @@ const AllInventoryBike = ({ bike }) => {
                 <h5 className='me-5 text-primary'>{name}</h5>
                 <p className='mx-2 text-danger'>Quantity: {quantity}</p>
                 <button className='ms-auto'>X</button>
+                <button className='ms-auto' onClick={handleAddItem}>Add Item</button>
             </div>
 
         </div>
