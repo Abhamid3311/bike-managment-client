@@ -12,6 +12,7 @@ import AllInventory from './components/AllInventory/AllInventory';
 import Blogs from './components/Blogs/Blogs';
 import BikeDetails from './components/BikeDetails/BikeDetails';
 import AddInventoryItem from './components/AddInventoryItem/AddInventoryItem';
+import RequireAuth from './components/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -21,13 +22,17 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         {/* <Route path='/home' element={<Home></Home>}></Route> */}
         <Route path='/inventory' element={<Inventory></Inventory>}></Route>
-        <Route path='/inventory/:id' element={<BikeDetails></BikeDetails>}></Route>
+        <Route path='/inventory/:id' element={
+          <RequireAuth>
+            <BikeDetails></BikeDetails>
+          </RequireAuth>
+        }></Route>
         <Route path='/allinventory' element={<AllInventory></AllInventory>}></Route>
 
         <Route path='/additem' element={<AddInventoryItem></AddInventoryItem>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
-        <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='/register' element={<SignUp></SignUp>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

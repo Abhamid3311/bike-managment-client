@@ -3,7 +3,7 @@ import React from 'react';
 const Blogs = () => {
     return (
         <div>
-            <h2>Blogs</h2>
+            <h2 className='text-center text-primary my-5'>Blogs</h2>
             <div>
                 <h3>Difference between javascript and node.js?</h3>
                 <p>JavaScript is a programming language. It is running in all web browser with a proper browser engine like V8, Spider monkey, javascript core etc. it is very easy to write and it follows standard code.JavaScript is normally used for any client-side activity for one web application. An activity can be addressing business validation or dynamic page display </p>
