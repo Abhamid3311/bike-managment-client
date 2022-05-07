@@ -6,22 +6,42 @@ import { useNavigate } from 'react-router-dom';
 
 const AllInventory = () => {
     const [bikes, setBikes] = useBikes();
-    const navigation = useNavigate()
+    const navigation = useNavigate();
 
     const handleAddItem = () => {
         navigation('/additem');
-    }
+    };
+
+    const handleDeleteBtn = id => {
+        const procced = window.confirm('You want to delete?');
+        if (procced) {
+            const url = `http://localhost:5000/inventory/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount > 0) {
+                        console.log('data deleted');
+                        const remaining = bikes.filter(bike => bike._id !== id);
+                        setBikes(remaining);
+                    }
+                })
+        };
+    };
     return (
-        <div>
+        <div className='text-center'>
             <div className='allInventory-container'>
                 {
                     bikes.map(bike => <AllInventoryBike
                         key={bike._id}
                         bike={bike}
-                        handleAddItem={handleAddItem}
+                        handleDeleteBtn={handleDeleteBtn}
                     ></AllInventoryBike>)
                 }
             </div>
+            <button className='btn-primary btn btn-lg' onClick={handleAddItem}>Add New Bike</button>
         </div>
     );
 };

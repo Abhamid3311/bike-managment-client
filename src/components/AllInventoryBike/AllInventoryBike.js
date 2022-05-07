@@ -1,7 +1,7 @@
 import React from 'react';
 import './AllInventoryBike.css';
 
-const AllInventoryBike = ({ bike, handleAddItem }) => {
+const AllInventoryBike = ({ bike, handleDeleteBtn }) => {
     const { _id, name, img, manufecturer, price, Description, quantity } = bike;
 
     return (
@@ -10,8 +10,8 @@ const AllInventoryBike = ({ bike, handleAddItem }) => {
                 <img className='me-5' src={img} width='55px' alt="" />
                 <h5 className='me-5 text-primary'>{name}</h5>
                 <p className='mx-2 text-danger'>Quantity: {quantity}</p>
-                <button className='ms-auto'>X</button>
-                <button className='ms-auto' onClick={handleAddItem}>Add Item</button>
+                <button onClick={() => handleDeleteBtn(_id)} className='ms-auto'>X</button>
+
             </div>
 
         </div>

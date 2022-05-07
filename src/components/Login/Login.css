@@ -30,7 +30,7 @@
 .input-group input {
     width: 415px;
     height: 45px;
-    border: 1px solid #95A0A7;
+    border: 1px solid green;
     box-sizing: border-box;
     border-radius: 5px;
     font-size: 20px;
@@ -48,7 +48,7 @@
 
 .forget-pass-p button {
     text-decoration: none;
-    color: green;
+    color: rgba(0, 128, 0, 0.404);
     cursor: pointer;
     border: none;
 }
@@ -57,7 +57,7 @@
     font-size: 25px;
     width: 415px;
     height: 55px;
-    background: rgba(255, 153, 0, 0.3);
+    background: green;
     border-radius: 5px;
     margin: 20px;
     border: none;
@@ -65,7 +65,7 @@
 }
 
 .form-submit:hover {
-    background: rgba(255, 153, 0, 0.6);
+    background: rgba(0, 128, 0, 0.815);
 }
 
 .form-link {

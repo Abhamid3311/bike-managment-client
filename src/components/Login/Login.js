@@ -75,7 +75,7 @@ const Login = () => {
 
 
                 <p className='create-account-p'>
-                    New to Sabit-photography? <Link className='form-link' to='/register'>create an account</Link>
+                    New to Dream Bike? <Link className='form-link' to='/register'>create an account</Link>
                 </p>
 
                 <p className='forget-pass-p'>

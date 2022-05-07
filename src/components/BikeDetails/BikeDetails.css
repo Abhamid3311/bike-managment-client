@@ -1,0 +1,13 @@
+.bikeDetails-cntainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bikeDetails-card {
+    border: 1px solid green;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 25px;
+}

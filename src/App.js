@@ -22,12 +22,18 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         {/* <Route path='/home' element={<Home></Home>}></Route> */}
         <Route path='/inventory' element={<Inventory></Inventory>}></Route>
+
         <Route path='/inventory/:id' element={
+
+          <BikeDetails></BikeDetails>
+
+        }></Route>
+
+        <Route path='/allinventory' element={
           <RequireAuth>
-            <BikeDetails></BikeDetails>
+            <AllInventory></AllInventory>
           </RequireAuth>
         }></Route>
-        <Route path='/allinventory' element={<AllInventory></AllInventory>}></Route>
 
         <Route path='/additem' element={<AddInventoryItem></AddInventoryItem>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
