@@ -14,35 +14,32 @@ const BikeDetails = () => {
             .then(data => setBike(data));
     }, []);
 
+    //Handle Delivered Button
+    const handleDeliveredBtn = () => {
+        const updateBike = { ...bike, quantity: bike.quantity - 1 };
+        setBike(updateBike);
 
-    /*  const handleDeliveredBtn = () => {
- 
-         //send to Server
-         const url = `http://localhost:5000/inventory/${id}`;
-         fetch(url, {
-             method: 'PUT',
-             headers: {
-                 'content-type': 'application/json'
-             },
-             body: JSON.stringify(quantity)
-         })
-             .then(res => res.json())
-             .then(result => {
-                 setBike({
-                     ...bike,
-                     quantity: bike.quantity - 1,
-                 });
-             })
- 
-     }; */
+        //send to Server
+        const url = `http://localhost:5000/inventory/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updateBike)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log('success', result);
+            });
+    };
 
+    //Handle ReStock Form
     const handleReStock = (event) => {
         event.preventDefault();
         const newQuantity = + event.target.quantity.value;
         const updateBike = { ...bike, quantity: bike.quantity + newQuantity };
         setBike(updateBike);
-        console.log(updateBike);
-
         fetch(`http://localhost:5000/inventory/${id}`, {
             method: "PUT",
             headers: {
@@ -53,7 +50,7 @@ const BikeDetails = () => {
             .then((response) => response.json())
             .then((data) => {
                 console.log("Success:", data);
-                alert("updateCar added successfully");
+                alert("updateBike added successfully");
                 event.target.reset();
             });
     };
@@ -72,7 +69,7 @@ const BikeDetails = () => {
                         <p>Quantity: {bike.quantity}</p>
                         <p>{bike.Description}</p>
 
-                        {/* <button onClick={() => handleDeliveredBtn(id)} className='btn btn-danger'>Delivered</button> */}
+                        <button onClick={() => handleDeliveredBtn(id)} className='btn btn-danger'>Delivered</button>
                     </div>
                 </div>
             </div>
