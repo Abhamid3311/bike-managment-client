@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import './BikeDetails.css';
 
 const BikeDetails = () => {
     let { id } = useParams();
     const [bike, setBike] = useState({});
+    const navigate = useNavigate();
+    const manageInventories = () => {
+        navigate('/allinventory');
+    };
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/inventory/${id}`;
+        const url = `https://secure-atoll-72404.herokuapp.com/inventory/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setBike(data));
@@ -20,7 +24,7 @@ const BikeDetails = () => {
         setBike(updateBike);
 
         //send to Server
-        const url = `http://localhost:5000/inventory/${id}`;
+        const url = `https://secure-atoll-72404.herokuapp.com/inventory/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -40,7 +44,7 @@ const BikeDetails = () => {
         const newQuantity = + event.target.quantity.value;
         const updateBike = { ...bike, quantity: bike.quantity + newQuantity };
         setBike(updateBike);
-        fetch(`http://localhost:5000/inventory/${id}`, {
+        fetch(`https://secure-atoll-72404.herokuapp.com/inventory/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -77,6 +81,7 @@ const BikeDetails = () => {
                 <input type="number" name="quantity" id="" />
                 <input className='btn btn-success' type="submit" value="Re-Stock" />
             </form>
+            <button className='btn btn-lg btn-primary mt-5' onClick={manageInventories}>Manage Inventories</button>
         </div>
     );
 };

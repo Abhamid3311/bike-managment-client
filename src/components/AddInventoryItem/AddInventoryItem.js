@@ -9,7 +9,7 @@ const AddInventoryItem = () => {
         console.log(data);
 
         //send to server
-        const url = `http://localhost:5000/inventory/`;
+        const url = `https://secure-atoll-72404.herokuapp.com/inventory/`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -28,8 +28,11 @@ const AddInventoryItem = () => {
             <h2>please add a service</h2>
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                 <input className='mb-3' placeholder='enter bike name' {...register("name", { required: true, maxLength: 20 })} />
-                <input className='mb-3' placeholder='quantity' type="number" {...register("quantity")} />
-                <input className='mb-3' placeholder='Photo URL' type="text" {...register("img")} />
+                <textarea required className='mb-3' placeholder='enter bike description' {...register("Description")} />
+                <input required className='mb-3' placeholder='price' type="number" {...register("price")} />
+                <input required className='mb-3' placeholder='quantity' type="number" {...register("quantity")} />
+                <input required className='mb-3' placeholder='Photo URL' type="text" {...register("img")} />
+                <input required className='mb-3' placeholder='enter Email' type="email" {...register("email")} />
                 <input type="submit" value='Add Item' />
             </form>
         </div>

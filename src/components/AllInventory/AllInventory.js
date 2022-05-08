@@ -15,7 +15,7 @@ const AllInventory = () => {
     const handleDeleteBtn = id => {
         const procced = window.confirm('You want to delete?');
         if (procced) {
-            const url = `http://localhost:5000/inventory/${id}`;
+            const url = `https://secure-atoll-72404.herokuapp.com/inventory/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

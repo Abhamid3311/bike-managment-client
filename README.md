@@ -1,6 +1,18 @@
-# Getting Started with Create React App
+# Dream Bike
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project made by React.js [Dream Bike](https://bikes-managment.web.app/).
+
+Server Site Link: [Dream Bike Server](https://secure-atoll-72404.herokuapp.com/inventory).
+
+
+
+## Top Feature of this Website: 
+* This a Website of Bike managment system.
+* Here are we can delete and add stock .
+* I have used firebase Authentication system for register and Login.
+* I have deployed Node server to the Heroku and Live site at Firebase.
+* Here we can  add item by giving there name,img,description and also giving by my own email.
+
 
 ## Available Scripts
 
