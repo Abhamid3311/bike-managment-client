@@ -8,7 +8,7 @@ const NotFound = () => {
         navigate('/');
     }
     return (
-        <div className='d-flex align-items-center justify-content-center my-5'>
+        <div className='d-flex align-items-center justify-content-center m-5'>
             <div>
                 <h1 className='oops text-danger'>Oops!</h1>
                 <h4 className='text-primary fs-3'>404- Page Not Found</h4>

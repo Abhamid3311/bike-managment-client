@@ -4,3 +4,9 @@
     grid-gap: 15px;
     margin: 15px;
 }
+
+@media only screen and (max-width:564px) {
+    .service-card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

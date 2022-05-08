@@ -3,3 +3,9 @@
     flex-direction: column;
     width: 100%;
 }
+
+@media only screen and (max-width:564px) {
+    .allInventory-container {
+        width: 100%;
+    }
+}

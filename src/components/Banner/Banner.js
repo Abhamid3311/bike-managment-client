@@ -22,7 +22,7 @@ const Banner = () => {
                     alt="Second slide"
                 />
                 <Carousel.Caption>
-                    <h3 className='text-danger'>Harley Davison</h3>
+                    <h3 className='text-danger'>Harley Davidson</h3>
                     <p>Bike of Luxarious and Bike of royality</p>
                 </Carousel.Caption>
             </Carousel.Item>

@@ -10,12 +10,12 @@ const AllInventoryBike = ({ bike, handleDeleteBtn }) => {
         navigation(`/inventory/${id}`)
     }
     return (
-        <div className='w-50 mx-auto '>
+        <div className='w-100 mx-auto '>
             <div className='d-flex  my-3 inventory-card'>
                 <img className='me-5' src={img} width='55px' alt="" />
                 <h5 className='me-5 text-primary'>{name}</h5>
-                <p className='mx-2 text-danger'>Quantity: {quantity}</p>
-                <button className='ms-auto ' onClick={() => handleUpdate(_id)}>Update</button>
+                <p className='me-5 text-danger'>Quantity: {quantity}</p>
+                <button className='ms-auto btn btn-success' onClick={() => handleUpdate(_id)}>Update</button>
                 <button onClick={() => handleDeleteBtn(_id)} className='ms-auto'>X</button>
 
             </div>

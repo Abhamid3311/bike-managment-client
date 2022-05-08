@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blogs = () => {
     return (
-        <div>
+        <div className='m-5'>
             <h2 className='text-center text-primary my-5'>Blogs</h2>
             <div>
                 <h3>Difference between javascript and node.js?</h3>
