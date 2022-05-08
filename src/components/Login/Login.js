@@ -7,6 +7,7 @@ import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Spinner } from 'react-bootstrap';
 
 
 const Login = () => {
@@ -67,7 +68,7 @@ const Login = () => {
 
                     <p style={{ color: "red" }}>{error?.message}</p>
                     {
-                        loading && <p>Loading...</p>
+                        loading && <Spinner animation="border" variant="success" />
                     }
 
                     <input className='form-submit' type="submit" value="Login" />
