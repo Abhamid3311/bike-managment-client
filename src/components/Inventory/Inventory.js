@@ -15,9 +15,9 @@ const Inventory = () => {
         navigat('/allinventory')
     }
     return (
-        <div>
-            <h1 className='text-center text-success my-5'>Our Collections</h1>
-            <div className='bikes-container'>
+        <div className='text-center'>
+            <h1 className=' text-success my-5'>Our Collections</h1>
+            <div className='bikes-container mb-3 text-start'>
                 {
                     bikes.map(bike => <Bike
                         key={bike._id}
