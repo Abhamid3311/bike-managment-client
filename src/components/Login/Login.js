@@ -16,7 +16,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
-    const [signInWithGoogle] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, gUser] = useSignInWithGoogle(auth);
     const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
     const [
@@ -35,7 +35,7 @@ const Login = () => {
     };
 
 
-    if (user) {
+    if (user || gUser) {
         navigate(from, { replace: true });
     }
 

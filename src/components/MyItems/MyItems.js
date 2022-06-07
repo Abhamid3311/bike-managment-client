@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import useBikes from '../../hooks/useBikes';
 import MyItem from '../MyItem/MyItem';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const MyItems = () => {
-    const [bikes, setBikes] = useBikes();
+    const [user] = useAuthState(auth);
+    const [myItems, setMyItems] = useState([]);
+    useEffect(() => {
+        const email = user?.email;
+        const url = `http://localhost:5000/myitem/${email}`;
+        fetch(url)
+            .then(res => res.json())
+            .then(result => setMyItems(result))
+    }, []);
+
+
+
+
+
+
     const handleDeleteBtn = id => {
         const procced = window.confirm('You want to delete?');
         if (procced) {
@@ -16,8 +32,8 @@ const MyItems = () => {
                     console.log(data);
                     if (data.deletedCount > 0) {
                         console.log('data deleted');
-                        const remaining = bikes.filter(bike => bike._id !== id);
-                        setBikes(remaining);
+                        const remaining = myItems.filter(bike => bike._id !== id);
+                        setMyItems(remaining);
                     }
                 })
         };
@@ -28,9 +44,9 @@ const MyItems = () => {
             <h2 className=' text-success my-5 text-center'>My Items</h2>
             <div className='bikes-container mb-3 text-start'>
                 {
-                    bikes.map(bike => <MyItem
-                        key={bike._id}
-                        bike={bike}
+                    myItems.map(item=> <MyItem
+                        key={item._id}
+                        item={item}
                         handleDeleteBtn={handleDeleteBtn}
                     ></MyItem>)
                 }

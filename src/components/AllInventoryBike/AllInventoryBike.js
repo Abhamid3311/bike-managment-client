@@ -1,8 +1,9 @@
 import React from 'react';
+import { Table } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './AllInventoryBike.css';
 
-const AllInventoryBike = ({ bike, handleDeleteBtn }) => {
+const AllInventoryBike = ({ bike, handleDeleteBtn, index }) => {
     const navigation = useNavigate();
     const { _id, name, img, manufecturer, price, Description, quantity } = bike;
     const handleUpdate = id => {
@@ -10,18 +11,16 @@ const AllInventoryBike = ({ bike, handleDeleteBtn }) => {
         navigation(`/inventory/${id}`)
     }
     return (
-        <div className='w-100 mx-auto '>
-            <div className='d-flex  my-3 inventory-card'>
-                <img className='me-5' src={img} width='55px' alt="" />
-                <h5 className='me-5 text-primary'>{name}</h5>
-                <p className='me-5 text-danger'>Quantity: {quantity}</p>
-                <button className='ms-auto btn btn-success' onClick={() => handleUpdate(_id)}>Update</button>
-                <button onClick={() => handleDeleteBtn(_id)} className='ms-auto'>X</button>
+        <tr>
+            <td>{index + 1}</td>
+            <td><img src={img} style={{ width: "80px" }} alt="" /></td>
+            <td>{name}</td>
+            <td>{quantity}</td>
+            <td><button onClick={() => handleUpdate(_id)} className='btn btn-success btn-sm'>Update</button></td>
+            <td><button onClick={() => handleDeleteBtn(_id)} className='btn btn-danger btn-sm'>Delete</button></td>
+        </tr>
 
-            </div>
-
-        </div>
-    );
-};
+    )
+}
 
 export default AllInventoryBike;

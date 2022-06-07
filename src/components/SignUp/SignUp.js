@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useAuthState, useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useAuthState, useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useSendEmailVerification } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
@@ -11,6 +11,9 @@ const Register = () => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+    const [signInWithGoogle, gUser] = useSignInWithGoogle(auth);
 
 
 
@@ -31,12 +34,11 @@ const Register = () => {
     };
 
 
+    if (user || gUser) {
+        navigate(from, { replace: true });
+    };
 
-
-
-    if (user) {
-        navigate('/');
-    }
+    //Create User
     const handleCreateUsers = e => {
         e.preventDefault();
         if (password !== confirmPassword) {
@@ -47,8 +49,14 @@ const Register = () => {
             setError('Password must be 6 charecters or longer');
             return;
         }
+        console.log(email, password);
         createUserWithEmailAndPassword(email, password);
-
+        navigate('/');
+    };
+    //Google SignIn
+    const handleGoogleSignIn = e => {
+        e.preventDefault();
+        signInWithGoogle(email, password)
     };
 
     return (
@@ -76,7 +84,7 @@ const Register = () => {
                 <p className='forget-pass-p'>
                     Already have an account? <Link className='form-link' to='/login'>Login</Link>
                 </p>
-                <button className='google-signIn-btn'>Continue with Google</button>
+                <button onClick={handleGoogleSignIn} className='google-signIn-btn'>Continue with Google</button>
             </div>
 
         </div>

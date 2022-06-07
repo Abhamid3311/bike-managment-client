@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import './BikeDetails.css';
 
 const BikeDetails = () => {
@@ -54,7 +55,7 @@ const BikeDetails = () => {
             .then((response) => response.json())
             .then((data) => {
                 console.log("Success:", data);
-                alert("updateBike added successfully");
+                toast.success('Stock added Successfully')
                 event.target.reset();
             });
     };
@@ -73,14 +74,19 @@ const BikeDetails = () => {
                         <p>Quantity: {bike.quantity}</p>
                         <p>{bike.Description}</p>
 
-                        <button onClick={() => handleDeliveredBtn(id)} className='btn btn-danger'>Delivered</button>
+                        <div className='d-flex justify-content-between align-items-center'>
+                            <button onClick={() => handleDeliveredBtn(id)} className='btn btn-danger' disabled={bike.quantity <= 0}>Delivered</button>
+
+                            <form onSubmit={handleReStock} className='d-flex align-items-center'>
+                                <input type="number" name="quantity" id="" />
+                                <input className='btn btn-success' type="submit" value="Re-Stock" />
+                            </form>
+                        </div>
+
                     </div>
                 </div>
             </div>
-            <form onSubmit={handleReStock} className='d-flex align-items-center'>
-                <input type="number" name="quantity" id="" />
-                <input className='btn btn-success' type="submit" value="Re-Stock" />
-            </form>
+
             <button className='btn btn-lg btn-primary mt-5' onClick={manageInventories}>Manage Inventories</button>
         </div>
     );

@@ -3,6 +3,8 @@ import useBikes from '../../hooks/useBikes';
 import AllInventoryBike from '../AllInventoryBike/AllInventoryBike';
 import './AllInventory.css';
 import { useNavigate } from 'react-router-dom';
+import { Table } from 'react-bootstrap';
+import { toast } from 'react-toastify';
 
 const AllInventory = () => {
     const [bikes, setBikes] = useBikes();
@@ -26,6 +28,7 @@ const AllInventory = () => {
                         console.log('data deleted');
                         const remaining = bikes.filter(bike => bike._id !== id);
                         setBikes(remaining);
+                        toast.error('Deleted Successfully');
                     }
                 })
         };
@@ -33,13 +36,32 @@ const AllInventory = () => {
     return (
         <div className='text-center'>
             <div className='allInventory-container'>
-                {
-                    bikes.map(bike => <AllInventoryBike
-                        key={bike._id}
-                        bike={bike}
-                        handleDeleteBtn={handleDeleteBtn}
-                    ></AllInventoryBike>)
-                }
+
+
+                <Table striped bordered hover>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Bike</th>
+                            <th>Name</th>
+                            <th>Quantity</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            bikes.map((bike, index) => <AllInventoryBike
+                                key={bike._id}
+                                bike={bike}
+                                handleDeleteBtn={handleDeleteBtn}
+                                index={index}
+                            >
+                            </AllInventoryBike>)
+                        }
+
+                    </tbody>
+                </Table>
             </div>
             <button className='btn-primary btn btn-lg' onClick={handleAddItem}>Add New Bike</button>
         </div>

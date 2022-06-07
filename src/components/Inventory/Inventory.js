@@ -11,7 +11,6 @@ const Inventory = () => {
 
 
     const handleUpdateBtn = id => {
-        console.log("clicked", id);
         navigat(`/inventory/${id}`);
     }
     const handleAllBike = () => {
