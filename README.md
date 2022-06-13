@@ -20,6 +20,7 @@ Server Site Link: [Dream Bike Server](https://secure-atoll-72404.herokuapp.com/i
 ## Used Technologies For This Website: 
 * HTML5
 * React Bootstrap
+* JavaScript
 * React js
 * Node 
 * Express js
