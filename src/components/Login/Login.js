@@ -52,9 +52,9 @@ const Login = () => {
     }
 
     return (
-        <div className='form-container'>
+        <div className='form-container mt-5'>
             <div>
-                <h2 className='form-titel'>Login</h2>
+                <h2 className='form-titel my-3'>Login</h2>
 
                 <form onSubmit={handleUserSignIn}>
                     <div className="input-group">
