@@ -9,7 +9,7 @@ const MyItems = () => {
     const [myItems, setMyItems] = useState([]);
     useEffect(() => {
         const email = user?.email;
-        const url = `http://localhost:5000/myitem/${email}`;
+        const url = `https://secure-atoll-72404.herokuapp.com/myitem/${email}`;
         fetch(url)
             .then(res => res.json())
             .then(result => setMyItems(result))
@@ -44,7 +44,7 @@ const MyItems = () => {
             <h2 className=' text-success my-5 text-center'>My Items</h2>
             <div className='bikes-container mb-3 text-start'>
                 {
-                    myItems.map(item=> <MyItem
+                    myItems.map(item => <MyItem
                         key={item._id}
                         item={item}
                         handleDeleteBtn={handleDeleteBtn}
