@@ -6,8 +6,8 @@ import './Service.css';
 
 const Services = () => {
     return (
-        <div>
-            <h1 className='text-center text-success my-5'> Reasons to stay with us</h1>
+        <div >
+            <h1 className='text-center text-success my-5'> Reasons <span className='text-danger'>To Stay</span> With Us</h1>
             <div className='service-card-container my-5'>
                 <Card border="success ">
                     <Card.Header className='text-center fs-1 text-primary'>

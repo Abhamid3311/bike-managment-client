@@ -17,10 +17,10 @@ const Inventory = () => {
         navigat('/allinventory')
     }
     return (
-        <div className='text-center'>
-            <h1 className=' text-success my-5'>Our Collections</h1>
-            <div className='bikes-container mb-3 text-start'>
+        <div className='text-center '>
+            <h1 className=' text-success my-5'>Our <span className='text-danger'>Collections</span></h1>
 
+            <div className='bikes-container mb-3 text-start'>
                 {
                     bikes.map(bike => <Bike
                         key={bike._id}
@@ -30,7 +30,7 @@ const Inventory = () => {
                 }
 
             </div>
-            <button className='btn btn-lg btn-success' onClick={handleAllBike}>Manage Inventories</button>
+            <button className='btn btn-lg btn-success ' onClick={handleAllBike}>Manage Inventories</button>
 
         </div>
     );

@@ -6,8 +6,8 @@ const Bike = ({ bike, handleUpdateBtn }) => {
     const { _id, name, img, manufecturer, price, Description, quantity } = bike;
     return (
         <div >
-            <Card className='bike-card'>
-                <Card.Img variant="top" style={{ height: "270px" }} src={img} />
+            <Card className='bike-card shadow'>
+                <Card.Img variant="top" src={img} className='w-100' />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">{manufecturer}</Card.Subtitle>
