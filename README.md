@@ -7,7 +7,8 @@ Server Site Link: [Dream Bike Server](https://secure-atoll-72404.herokuapp.com/i
 
 
 ## Top Feature of this Website: 
-* This is a Website of Bike Inventory managment system.
+* Dream Bike is a Website of Bike Inventory managment system.
+* It is a Full responsive and attractive UI base website.
 * There is a Update button with this we can go Update page.
 * There we  can do Re-stock Item and We Can Deleverd Item from stock.
 * Here we can do Sign Up or Login by using Email and Google SignIn.
@@ -19,12 +20,14 @@ Server Site Link: [Dream Bike Server](https://secure-atoll-72404.herokuapp.com/i
 
 ## Used Technologies For This Website: 
 * HTML5
+* CSS3
 * React Bootstrap
 * JavaScript
 * React js
 * Node 
 * Express js
 * MongoDB
+* Firebase
 * React Form hooks
 * React Firebase hooks
 
