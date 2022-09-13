@@ -1,50 +1,64 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThumbsUp, faCheckSquare, faUserClock } from '@fortawesome/free-solid-svg-icons';
+import { faThumbsUp, faCheckSquare, faUserClock,faTaxi,faStar,faShield} from '@fortawesome/free-solid-svg-icons';
 import { Card } from 'react-bootstrap';
 import './Service.css';
 
 const Services = () => {
+    const serviceCard = [
+        {
+            name: "Flexible Hours",
+            details: "As an agency built on creativity, we want you at your best. That's why we work remotely on select days.",
+            icon: faUserClock
+        },
+        {
+            name: "Compensation",
+            details: " We value the members of our team, and pay competitive wages based on position and experience.",
+            icon: faThumbsUp
+        },
+        {
+            name: "Rewards",
+            details: " We offer a program that provides incentives to everyone to help grow and maintain a healthy agency.",
+            icon: faCheckSquare
+        },
+        {
+            name: "Special Care",
+            details: " We offer a program that provides incentives to everyone to help grow and maintain a healthy agency.",
+            icon: faStar
+        },
+        {
+            name: "Post Sell Service",
+            details: " We offer a program that provides incentives to everyone to help grow and maintain a healthy agency.",
+            icon: faShield
+        },
+        {
+            name: "Home Delivery",
+            details: " We offer a program that provides incentives to everyone to help grow and maintain a healthy agency.",
+            icon:  faTaxi
+        },
+    ];
+
+   
     return (
         <div >
             <h1 className='text-center text-success my-5'> Reasons <span className='text-danger'>To Stay</span> With Us</h1>
-            <div className='service-card-container my-5'>
-                <Card border="success ">
-                    <Card.Header className='text-center fs-1 text-primary'>
-                        <FontAwesomeIcon icon={faUserClock} />
-                    </Card.Header>
-                    <Card.Body>
-                        <Card.Title className='text-danger text-center'>Flexible Hours</Card.Title>
-                        <Card.Text >
-                            As an agency built on creativity, we want you at your best. That's why we work remotely on select days.
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
+            <div className='service-card-container pb-5'>
 
-                <Card border="success" >
-                    <Card.Header className='text-center fs-1 text-warning '>
-                        <FontAwesomeIcon icon={faCheckSquare} />
-                    </Card.Header>
-                    <Card.Body>
-                        <Card.Title className='text-danger text-center'>Compensation</Card.Title>
-                        <Card.Text>
-                            We value the members of our team, and pay competitive wages based on position and experience.
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-                <Card border="success" >
-                    <Card.Header className='text-center fs-1 text-info'>
-                        <FontAwesomeIcon icon={faThumbsUp} />
-                    </Card.Header>
-                    <Card.Body>
-                        <Card.Title className='text-danger text-center'>Rewards</Card.Title>
-                        <Card.Text>
-                            We offer a program that provides incentives to everyone to help grow and maintain a healthy agency.
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-
-
+                {
+                    serviceCard.map(service => <Card border="success bg-dark">
+                        <Card.Header className='text-center fs-1 text-warning'>
+                            <FontAwesomeIcon icon={service.icon} />
+                            
+                        </Card.Header>
+                        <Card.Body>
+                            <Card.Title className='text-danger text-center'>{service.name}
+                            </Card.Title>
+                            <Card.Text >
+                                {service.details}
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>)
+                }
             </div>
         </div>
     );

@@ -6,7 +6,7 @@ const Bike = ({ bike, handleUpdateBtn }) => {
     const { _id, name, img, manufecturer, price, Description, quantity } = bike;
     return (
         <div >
-            <Card className='bike-card shadow'>
+            <Card className='bike-card shadow bg-dark text-white'>
                 <Card.Img variant="top" src={img} className='w-100' />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
@@ -14,7 +14,7 @@ const Bike = ({ bike, handleUpdateBtn }) => {
                     <p>Quantity: {quantity}</p>
                     <h5 className='text-danger mt-2'>Price: {price} BDT</h5>
                     <Card.Text>
-                        {Description}
+                        {Description.slice(0,200)}
                     </Card.Text>
 
                     <Button onClick={() => handleUpdateBtn(_id)} className='update-btn' variant="success">Update</Button>

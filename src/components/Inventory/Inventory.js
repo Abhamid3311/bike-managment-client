@@ -17,7 +17,7 @@ const Inventory = () => {
         navigat('/allinventory')
     }
     return (
-        <div className='text-center '>
+        <div className='text-center bg-dark py-5'>
             <h1 className=' text-success my-5'>Our <span className='text-danger'>Collections</span></h1>
 
             <div className='bikes-container mb-3 text-start'>

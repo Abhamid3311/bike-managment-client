@@ -6,10 +6,10 @@ import bike from '../../images/feature.jpg'
 const TopSell = () => {
 
     return (
-        <div className=' my-5  py-5 shadow-lg'>
+        <div className=' my-5  py-5 shadow-lg '>
 
             <div className='d-flex flex-column flex-lg-row justify-content-between  '>
-                <img src={bike} className='w-50 w-sm-100' alt="" />
+                <img src={"https://i.ibb.co/5h18sPM/yamaha-r15-v20-price-in-india-removebg-preview.png"} className='w-50 w-sm-100' alt="" />
 
                 <div className='ms-3 flex-grow-1 mt-5'>
                     <h3 className='text-success fs-2'>About <span className='text-danger'>Dream Bike</span> Dealership</h3>
