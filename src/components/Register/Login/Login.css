@@ -1,116 +1,33 @@
 .form-container {
     width: 600px;
-    margin: 0 auto;
-    border: 1px solid #95A0A7;
+    margin: 60px auto;
     box-sizing: border-box;
-    border-radius: 8px;
+    border-radius: 15px;
     display: flex;
     justify-content: center;
+    padding-bottom: 50px;
+    background-color: #ffffff;
 }
 
-.form-titel {
-    font-size: 35px;
-    color: green;
-    font-weight: 400;
-    margin-left: 20px;
-}
-
-
-.input-group {
-    margin: 20px;
-    flex-direction: column
-}
-
-.input-group label {
-    display: block;
-    margin-left: 5px;
-
-}
-
-.input-group input {
-    width: 415px;
-    height: 45px;
-    border: 1px solid green;
-    box-sizing: border-box;
-    border-radius: 5px;
-    font-size: 20px;
-}
-
-.create-account-p {
-    margin-left: 20px;
-    margin-top: 0;
-}
-
-.forget-pass-p {
-    margin-left: 20px;
-    margin-top: 0;
-}
-
-.forget-pass-p button {
-    text-decoration: none;
-    color: rgba(0, 128, 0, 0.404);
-    cursor: pointer;
-    border: none;
-}
-
-.form-submit {
-    font-size: 25px;
-    width: 415px;
-    height: 55px;
-    background: green;
-    border-radius: 5px;
-    margin: 20px;
-    border: none;
-    cursor: pointer;
-}
-
-.form-submit:hover {
-    background: rgba(0, 128, 0, 0.815);
-}
-
-.form-link {
-    color: #FF9900;
-    text-decoration: none;
-}
 
 .google-signIn-btn {
     font-size: 25px;
-    width: 415px;
+    width: 445px;
     height: 55px;
     cursor: pointer;
     border-radius: 5px;
     margin: 20px;
     border: none;
-    background-color: rgba(128, 128, 128, 0.692);
 }
 
-.google-signIn-btn:hover {
-    background-color: lightskyblue;
-}
 
 @media only screen and (max-width:564px) {
     .form-container {
         width: 400px;
     }
-
-    .form-titel {
-        font-size: 40px;
-    }
-
-    .form-submit {
-        font-size: 20px;
-        width: 200px;
-        height: 30px;
-    }
-
-    .input-group input {
-        width: 200px;
-        height: 30px;
-    }
-
     .google-signIn-btn {
         font-size: 20px;
         width: 300px;
         height: 30px;
-    }
+    } 
 }

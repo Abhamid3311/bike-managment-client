@@ -9,9 +9,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
+import { useNavigate } from 'react-router-dom';
 
 
 const Banner = () => {
+    const navigate = useNavigate();
     const swiperSlideDetails = [
         {
             headline: "INTRUDER ABS FI",
@@ -41,7 +43,12 @@ const Banner = () => {
             oldPrice: "5,65,000",
             img: "https://i.ibb.co/WtJnMyt/Yamaha-R15-V4-Racing-Blue-removebg-preview.png"
         },
-    ]
+    ];
+
+    const handleexploreBtn = () => {
+        navigate("/allinventory")
+    }
+
     return (
         <div>
             <Swiper
@@ -63,21 +70,21 @@ const Banner = () => {
                 {
                     swiperSlideDetails.map(slide => <SwiperSlide>
                         <div class="row d-flex d-block h-100 w-100 text-white bg-slide py-5">
+
                             <div class="col-12 col-lg-7 col-md-12 col-sm-12 mt-5 text-start px-5 ">
                                 <h1 class="fw-bold fs-1 ms-2 text-danger">{slide.headline}</h1>
                                 <p class="ms-2">{slide.desc}</p>
 
-                                <div className='my-4'>
-                                    <h4 class="ms-2 fs-2 text-danger ">${slide.newPrice}</h4>
-                                    <p class="ms-2 fs-5 text-success "><del>${slide.oldPrice}</del></p>
+                                <div className='my-4 ms-2 fs-2'>
+                                    <h4 class="text-danger ">${slide.newPrice}</h4>
+                                    <p class=" fs-5 text-success "><del>${slide.oldPrice}</del></p>
                                 </div>
 
-
-                                <button class="btn btn-outline-success ms-2 mt-4 btn-lg">Explore Now </button>
+                                <button onClick={handleexploreBtn} class="btn btn-outline-success ms-2 mt-4 btn-lg">Explore Now </button>
                             </div>
 
                             <div class="col-12 col-lg-5 col-md-12 col-sm-12 ">
-                                <img src={slide.img} class="img-fluid w-100" width="402px" height="378px" alt='' />
+                                <img src={slide.img} class="img-fluid" width="402px" height="378px" alt='' />
                             </div>
                         </div>
                     </SwiperSlide>)

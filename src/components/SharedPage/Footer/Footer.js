@@ -53,7 +53,7 @@ const Footer = () => {
                 </div>
 
                 <div class="text-center py-4  border-top ">
-                    <p>&copy; 2022 Dream Bike, Inc. All rights reserved.</p>
+                    <p>&copy; 2022 Dream Bike ||  All rights reserved || Created By Ab Hamid</p>
                 </div>
             </footer>
         </div>

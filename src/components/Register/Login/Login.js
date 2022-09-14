@@ -13,9 +13,11 @@ import { Spinner } from 'react-bootstrap';
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
+
     const [signInWithGoogle, gUser] = useSignInWithGoogle(auth);
     const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
@@ -52,44 +54,57 @@ const Login = () => {
     }
 
     return (
-        <div className='form-container mt-5'>
-            <div>
-                <h2 className='form-titel my-3'>Login</h2>
+        <div className='bg-dark py-3'>
+            <div className='form-container shadow-lg'>
+                <div>
+                    <h2 className='text-center fw-bold fs-1 text-success py-5'>Login</h2>
+                    <form onSubmit={handleUserSignIn}>
 
-                <form onSubmit={handleUserSignIn}>
-                    <div className="input-group">
-                        <label htmlFor="email">Email</label>
-                        <input onBlur={handleEmailBlur} type="email" name="email" required />
-                    </div>
-                    <div className="input-group">
-                        <label htmlFor="password">Password</label>
-                        <input onBlur={handlePasswordBlur} type="password" name="password" required />
-                    </div>
+                        <div class="form-floating mb-3">
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="floatingInput"
+                                placeholder="name@example.com"
+                                onBlur={handleEmailBlur} />
+                            <label for="floatingInput">Email address</label>
+                        </div>
 
-                    <p style={{ color: "red" }}>{error?.message}</p>
-                    {
-                        loading && <Spinner animation="border" variant="success" />
-                    }
+                        <div class="form-floating">
+                            <input
+                                type="password"
+                                class="form-control"
+                                id="floatingPassword"
+                                placeholder="Password"
+                                onBlur={handlePasswordBlur} />
+                            <label for="floatingPassword">Password</label>
+                        </div>
 
-                    <input className='form-submit' type="submit" value="Login" />
-                </form>
+                        <p style={{ color: "red" }}>{error?.message}</p>
+                        {
+                            loading && <Spinner animation="border" variant="success" />
+                        }
+
+                        <button class="btn btn-primary btn-lg w-100" type="submit">Login</button>
+                    </form>
 
 
-                <p className='create-account-p'>
-                    New to Dream Bike? <Link className='form-link' to='/register'>create an account</Link>
-                </p>
+                    <p className='mt-3 text-start'>
+                        New to Dream Bike? <Link className='text-danger' to='/register'>create an account</Link>
+                    </p>
 
-                <p className='forget-pass-p'>
-                    Forget your password? <button onClick={async () => {
-                        await sendPasswordResetEmail(email);
-                        toast('Check email for reset password');
-                    }} className='reset'>Reset password</button>
-                </p>
+                    <p>Forget your password?
+                        <button onClick={async () => {
+                            await sendPasswordResetEmail(email);
+                            toast('Check email for reset password');
+                        }} className='btn btn-light'>Reset password
+                        </button>
+                    </p>
 
-                <ToastContainer />
-                <button onClick={handleGoogleSignIn} className='google-signIn-btn'>Continue with Google</button>
+                    <button onClick={handleGoogleSignIn} className='google-signIn-btn btn-primary'>Continue with Google</button>
+                </div>
+
             </div>
-
         </div>
     );
 };
