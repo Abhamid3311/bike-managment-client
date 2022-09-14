@@ -69,7 +69,7 @@ const Banner = () => {
                                 </div>
 
 
-                                <button class="btn btn-danger ms-2 mt-5 btn-lg">Explore Now </button>
+                                <button class="btn btn-outline-danger ms-2 mt-4 btn-lg">Explore Now </button>
                             </div>
 
                             <div class="col-12 col-lg-5 col-md-12 col-sm-12 ">

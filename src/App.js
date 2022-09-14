@@ -2,20 +2,21 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import NotFound from './components/NotFound/NotFound';
+import Header from './components/SharedPage/Header/Header';
+import Footer from './components/SharedPage/Footer/Footer';
+import NotFound from './components/SharedPage/NotFound/NotFound';
 import Inventory from './components/Inventory/Inventory';
-import Login from './components/Login/Login';
-import SignUp from './components/SignUp/SignUp';
-import AllInventory from './components/AllInventory/AllInventory';
+import Login from './components/Register/Login/Login';
+import SignUp from './components/Register/SignUp/SignUp';
+import AllInventory from './components/Pages/AllInventory/AllInventory';
+
 import Blogs from './components/Blogs/Blogs';
 import BikeDetails from './components/BikeDetails/BikeDetails';
-import AddInventoryItem from './components/AddInventoryItem/AddInventoryItem';
-import RequireAuth from './components/RequireAuth/RequireAuth';
+import AddInventoryItem from './components/Pages/AddInventoryItem/AddInventoryItem';
+import RequireAuth from './components/SharedPage/RequireAuth/RequireAuth';
 import MyItems from './components/MyItems/MyItems';
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
-import useBikes from '../../hooks/useBikes';
-import AllInventoryBike from '../AllInventoryBike/AllInventoryBike';
+import useBikes from '../../../hooks/useBikes';
+import AllInventoryBike from '../../AllInventoryBike/AllInventoryBike';
 import './AllInventory.css';
 import { useNavigate } from 'react-router-dom';
 import { Table } from 'react-bootstrap';

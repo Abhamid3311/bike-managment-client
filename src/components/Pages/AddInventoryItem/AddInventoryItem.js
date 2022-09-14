@@ -1,8 +1,8 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import useBikes from '../../hooks/useBikes';
+import useBikes from '../../../hooks/useBikes';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../firebase.init';
+import auth from '../../../firebase.init';
 
 const AddInventoryItem = () => {
     const [user] = useAuthState(auth);

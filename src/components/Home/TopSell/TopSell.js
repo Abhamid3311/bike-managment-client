@@ -1,7 +1,5 @@
 import React from 'react';
-import useBikes from '../../hooks/useBikes';
-import Bike from '../Bike/Bike';
-import bike from '../../images/feature.jpg'
+
 
 const TopSell = () => {
 
