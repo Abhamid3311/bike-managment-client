@@ -6,7 +6,7 @@ import TopSell from './TopSell/TopSell';
 
 const Home = () => {
     return (
-        <div className='bg-dark text-white '>
+        <div className='bg-dark text-white pb-5'>
             <Banner></Banner>
             <Inventory></Inventory>
             <TopSell></TopSell>

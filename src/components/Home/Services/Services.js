@@ -41,7 +41,7 @@ const Services = () => {
 
     return (
         <div >
-            <h1 className='text-center text-success my-5'> Reasons <span className='text-danger'>To Stay</span> With Us</h1>
+            <h1 className='text-center text-success py-5'> Reasons <span className='text-danger'>To Stay</span> With Us</h1>
             <div className='service-card-container pb-5'>
 
                 {
