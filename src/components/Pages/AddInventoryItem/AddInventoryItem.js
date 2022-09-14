@@ -30,7 +30,7 @@ const AddInventoryItem = () => {
         <div className='bg-dark  py-3'>
             <div className=' w-50  mx-auto p-3 shadow-lg rounded bg-white my-5'>
 
-                <h2 className='text-center fw-bold fs-1 text-success py-3'>Add A New Bike</h2>
+                <h2 className='text-center fw-bold fs-1 text-primary py-3'>Add A New Bike</h2>
                 <form className='d-flex flex-column ' onSubmit={handleSubmit(onSubmit)}>
 
                     <input required className='mb-3 form-control' value={user?.email} type="email" {...register("email")} disabled />
@@ -48,7 +48,7 @@ const AddInventoryItem = () => {
                     <textarea required className='mb-3 form-control' placeholder='Enter bike description' {...register("Description")} />
 
 
-                    <input type="submit" value='Add Item' className=' btn btn-success' />
+                    <input type="submit" value='Add Item' className=' btn btn-primary' />
                 </form>
             </div>
         </div>

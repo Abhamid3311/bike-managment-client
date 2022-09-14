@@ -16,7 +16,7 @@ const AllInventoryBike = ({ bike, handleDeleteBtn, index }) => {
             <td><img src={img} style={{ width: "80px" }} alt="" /></td>
             <td>{name}</td>
             <td>{quantity}</td>
-            <td><button onClick={() => handleUpdate(_id)} className='btn btn-success btn-sm'>Update</button></td>
+            <td><button onClick={() => handleUpdate(_id)} className='btn btn-primary btn-sm'>Update</button></td>
             <td><button onClick={() => handleDeleteBtn(_id)} className='btn btn-danger btn-sm'>Delete</button></td>
         </tr>
 

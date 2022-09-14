@@ -18,7 +18,7 @@ const Inventory = () => {
     }
     return (
         <div className='text-center bg-dark py-5'>
-            <h1 className=' text-success my-5'>Our <span className='text-danger'>Collections</span></h1>
+            <h1 className=' text-primary my-5'>Our <span className='text-danger'>Collections</span></h1>
 
             <div className='bikes-container mb-3 text-start'>
                 {
@@ -30,9 +30,9 @@ const Inventory = () => {
                 }
 
             </div>
-            <button className='btn btn-lg btn-success mb-5' onClick={handleAllBike}>Manage Inventories</button>
+            <button className='btn btn-lg btn-primary mb-5' onClick={handleAllBike}>Manage Inventories</button>
 
-           
+
 
         </div>
     );

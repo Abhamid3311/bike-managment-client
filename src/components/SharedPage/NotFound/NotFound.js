@@ -13,7 +13,7 @@ const NotFound = () => {
                 <h1 className='oops text-danger'>Oops!</h1>
                 <h4 className='text-primary fs-3'>404- Page Not Found</h4>
                 <p>The Page you are looking for might have been removed or temporary unavailable</p>
-                <button onClick={goToHomepage} className='btn btn-success btn-lg'>Go HomePage</button>
+                <button onClick={goToHomepage} className='btn btn-primary btn-lg'>Go HomePage</button>
             </div>
         </div>
     );

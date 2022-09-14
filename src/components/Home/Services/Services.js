@@ -41,12 +41,12 @@ const Services = () => {
 
     return (
         <div >
-            <h1 className='text-center text-success py-5'> Reasons <span className='text-danger'>To Stay</span> With Us</h1>
+            <h1 className='text-center text-primary py-5'> Reasons <span className='text-danger'>To Stay</span> With Us</h1>
             <div className='service-card-container pb-5'>
 
                 {
-                    serviceCard.map(service => <Card border="success bg-dark">
-                        <Card.Header className='text-center fs-1 text-success'>
+                    serviceCard.map(service => <Card border="primary bg-dark">
+                        <Card.Header className='text-center fs-1 text-primary'>
                             <FontAwesomeIcon icon={service.icon} />
                             <Card.Title className='text-danger text-center mt-2'>{service.name}
                             </Card.Title>
@@ -59,7 +59,7 @@ const Services = () => {
                     </Card>)
                 }
             </div>
-            <img src={"https://i.ibb.co/4R6NCZ1/footer-image-159048975448445.jpg"} alt="" className='img-fluid'/>
+            <img src={"https://i.ibb.co/4R6NCZ1/footer-image-159048975448445.jpg"} alt="" className='img-fluid' />
         </div>
     );
 };

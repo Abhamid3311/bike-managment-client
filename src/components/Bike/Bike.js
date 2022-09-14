@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import './Bike.css';
+import '../Home/Banner/Banner.css'
 
 const Bike = ({ bike, handleUpdateBtn }) => {
     const { _id, name, img, manufecturer, price, Description, quantity } = bike;
@@ -10,14 +11,14 @@ const Bike = ({ bike, handleUpdateBtn }) => {
                 <Card.Img variant="top" src={img} className='w-100' />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">{manufecturer}</Card.Subtitle>
+                    <Card.Subtitle className="text-muted">{manufecturer}</Card.Subtitle>
                     <p>Quantity: {quantity}</p>
-                    <h5 className='text-danger mt-2'>Price: {price} BDT</h5>
+                    <h5 className='text-danger'>Price: {price} BDT</h5>
                     <Card.Text>
-                        {Description.slice(0, 200)}
+                        {Description.slice(0, 150)}
                     </Card.Text>
 
-                    <Button onClick={() => handleUpdateBtn(_id)} className='update-btn' variant="success">Update</Button>
+                    <Button onClick={() => handleUpdateBtn(_id)} className='update-btn' variant="primary">Update</Button>
                 </Card.Body>
             </Card>
         </div >

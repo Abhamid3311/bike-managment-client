@@ -79,7 +79,7 @@ const BikeDetails = () => {
 
                             <form onSubmit={handleReStock} className='d-flex align-items-center'>
                                 <input type="number" name="quantity" id="" />
-                                <input className='btn btn-success' type="submit" value="Re-Stock" />
+                                <input className='btn btn-primary' type="submit" value="Re-Stock" />
                             </form>
                         </div>
 

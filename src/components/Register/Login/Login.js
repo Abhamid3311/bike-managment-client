@@ -57,23 +57,23 @@ const Login = () => {
         <div className='bg-dark py-3'>
             <div className='form-container shadow-lg'>
                 <div>
-                    <h2 className='text-center fw-bold fs-1 text-success py-5'>Login</h2>
+                    <h2 className='text-center fw-bold fs-1 text-primary py-5'>Login</h2>
                     <form onSubmit={handleUserSignIn}>
 
-                        <div class="form-floating mb-3">
+                        <div className="form-floating mb-3">
                             <input
                                 type="email"
-                                class="form-control"
+                                className="form-control"
                                 id="floatingInput"
                                 placeholder="email"
                                 onBlur={handleEmailBlur} required />
                             <label for="floatingInput">Email address</label>
                         </div>
 
-                        <div class="form-floating">
+                        <div className="form-floating">
                             <input
                                 type="password"
-                                class="form-control"
+                                className="form-control"
                                 id="floatingPassword"
                                 placeholder="Password"
                                 onBlur={handlePasswordBlur} required />
@@ -85,7 +85,7 @@ const Login = () => {
                             loading && <Spinner animation="border" variant="success" />
                         }
 
-                        <button class="btn btn-primary btn-lg w-100" type="submit">Login</button>
+                        <button className="btn btn-primary btn-lg w-100" type="submit">Login</button>
                     </form>
 
 
@@ -101,7 +101,7 @@ const Login = () => {
                         </button>
                     </p>
 
-                    <button onClick={handleGoogleSignIn} className='google-signIn-btn btn-success'>Continue with Google</button>
+                    <button onClick={handleGoogleSignIn} className='google-signIn-btn btn-primary'>Continue with Google</button>
                 </div>
 
             </div>

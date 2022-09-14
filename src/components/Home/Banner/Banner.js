@@ -37,7 +37,7 @@ const Banner = () => {
             img: "https://www.suzuki.com.bd/images/bike_models/variant_color_images/variant_color_image__160682555276344.png"
         },
         {
-            headline: "Yamaha R15 V4 Racing Blue",
+            headline: "Yamaha R15 V4 Racing",
             desc: "This is The Best Bike set in the world for people who just want to Spent time By Riding Bike.",
             newPrice: "5,45,000",
             oldPrice: "5,65,000",
@@ -69,22 +69,22 @@ const Banner = () => {
             >
                 {
                     swiperSlideDetails.map(slide => <SwiperSlide>
-                        <div class="row d-flex d-block h-100 w-100 text-white bg-slide py-5">
+                        <div className="row d-flex d-block h-100 w-100 text-white bg-slide py-5">
 
-                            <div class="col-12 col-lg-6 col-md-12 col-sm-12 mt-5 text-start px-5 ">
-                                <h1 class="fw-bold fs-1 ms-2 text-danger">{slide.headline}</h1>
-                                <p class="ms-2">{slide.desc}</p>
+                            <div className="col-12 col-lg-6 col-md-12 col-sm-12 mt-5 text-start px-5 ">
+                                <h1 className="fw-bold fs-1 ms-2 text-danger">{slide.headline}</h1>
+                                <p className="ms-2">{slide.desc}</p>
 
                                 <div className='my-4 ms-2 fs-2'>
-                                    <h4 class="text-danger ">${slide.newPrice}</h4>
-                                    <p class=" fs-5 text-success "><del>${slide.oldPrice}</del></p>
+                                    <h4 className="text-danger ">${slide.newPrice}</h4>
+                                    <p className=" fs-5 text-primary "><del>${slide.oldPrice}</del></p>
                                 </div>
 
-                                <button onClick={handleexploreBtn} class="btn btn-outline-success ms-2 mt-4 btn-lg">Explore Now </button>
+                                <button onClick={handleexploreBtn} className="btn btn-outline-primary ms-2 mt-4 btn-lg">Explore Now </button>
                             </div>
 
-                            <div class="col-12 col-lg-6 col-md-12 col-sm-12 ">
-                                <img src={slide.img} class="img-fluid" width="402px" height="378px" alt='' />
+                            <div className="col-12 col-lg-6 col-md-12 col-sm-12 ">
+                                <img src={slide.img} className="img-fluid" width="402px" height="378px" alt='' />
                             </div>
                         </div>
                     </SwiperSlide>)
