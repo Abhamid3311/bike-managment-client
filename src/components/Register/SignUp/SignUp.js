@@ -53,6 +53,7 @@ const Register = () => {
         createUserWithEmailAndPassword(email, password);
         navigate('/');
     };
+
     //Google SignIn
     const handleGoogleSignIn = e => {
         e.preventDefault();
@@ -60,33 +61,55 @@ const Register = () => {
     };
 
     return (
-        <div className='form-container mt-5'>
-            <div>
-                <h2 className='form-titel my-3'>Sign Up</h2>
-                <form onSubmit={handleCreateUsers}>
-                    <div className="input-group">
-                        <label htmlFor="email">Email</label>
-                        <input onBlur={handleEmailBlur} type="email" name="email" id="" required />
-                    </div>
-                    <div className="input-group">
-                        <label htmlFor="password">Password</label>
-                        <input onBlur={handlePasswordBlur} type="password" name="password" id="" required />
-                    </div>
-                    <div className="input-group">
-                        <label htmlFor="confirm-password">Confirm Password</label>
-                        <input onBlur={handleConfirmPasswordBlur} type="password" name="confirm-password" id="" required />
-                    </div>
-                    <p style={{ color: "red" }}>{error}</p>
-                    <input
+        <div className='bg-dark py-3'>
+            <div className='form-container shadow-lg'>
+                <div>
+                    <h2 className='text-center fw-bold fs-1 text-success py-5'>Sign Up</h2>
 
-                        className='form-submit' type="submit" value="Sign Up" />
-                </form>
-                <p className='forget-pass-p'>
-                    Already have an account? <Link className='form-link' to='/login'>Login</Link>
-                </p>
-                <button onClick={handleGoogleSignIn} className='google-signIn-btn'>Continue with Google</button>
+                    <form onSubmit={handleCreateUsers}>
+                        <div class="form-floating mb-3">
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="floatingInput"
+                                placeholder="name@example.com"
+                                onBlur={handleEmailBlur} required />
+                            <label for="floatingInput">Email address</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input
+                                type="password"
+                                class="form-control"
+                                id="floatingPassword"
+                                placeholder="Password"
+                                onBlur={handlePasswordBlur} required />
+                            <label for="floatingPassword">Password</label>
+                        </div>
+
+                        <div class="form-floating">
+                            <input
+                                type="password"
+                                class="form-control"
+                                id="floatingPassword"
+                                placeholder="Password"
+                                onBlur={handleConfirmPasswordBlur} required />
+                            <label for="floatingPassword">Confirm Password</label>
+                        </div>
+                        <p className='text-danger'>{error}</p>
+
+                        <button class="btn btn-primary btn-lg w-100" type="submit">Sign Up</button>
+                    </form>
+
+
+                    <p className=' text-start'>
+                        Already have an account? <Link className='text-danger' to='/login'>Login</Link>
+                    </p>
+
+                    <button onClick={handleGoogleSignIn} className='google-signIn-btn btn-success'>Continue with Google</button>
+                </div>
+
             </div>
-
         </div>
 
 

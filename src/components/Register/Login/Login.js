@@ -66,7 +66,7 @@ const Login = () => {
                                 class="form-control"
                                 id="floatingInput"
                                 placeholder="name@example.com"
-                                onBlur={handleEmailBlur} />
+                                onBlur={handleEmailBlur} required />
                             <label for="floatingInput">Email address</label>
                         </div>
 
@@ -76,7 +76,7 @@ const Login = () => {
                                 class="form-control"
                                 id="floatingPassword"
                                 placeholder="Password"
-                                onBlur={handlePasswordBlur} />
+                                onBlur={handlePasswordBlur} required />
                             <label for="floatingPassword">Password</label>
                         </div>
 
@@ -101,7 +101,7 @@ const Login = () => {
                         </button>
                     </p>
 
-                    <button onClick={handleGoogleSignIn} className='google-signIn-btn btn-primary'>Continue with Google</button>
+                    <button onClick={handleGoogleSignIn} className='google-signIn-btn btn-success'>Continue with Google</button>
                 </div>
 
             </div>
