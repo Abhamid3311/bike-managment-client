@@ -72,7 +72,7 @@ const Register = () => {
                                 type="email"
                                 class="form-control"
                                 id="floatingInput"
-                                placeholder="name@example.com"
+                                placeholder="email"
                                 onBlur={handleEmailBlur} required />
                             <label for="floatingInput">Email address</label>
                         </div>
