@@ -30,7 +30,9 @@ const Inventory = () => {
                 }
 
             </div>
-            <button className='btn btn-lg btn-success ' onClick={handleAllBike}>Manage Inventories</button>
+            <button className='btn btn-lg btn-success mb-5' onClick={handleAllBike}>Manage Inventories</button>
+
+           
 
         </div>
     );

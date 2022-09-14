@@ -41,7 +41,7 @@ const MyItems = () => {
 
     return (
         <div>
-            <h2 className=' text-success my-5 text-center'>My Items</h2>
+            <h2 className='text-success my-5 text-center'>My Added Items</h2>
             <div className='bikes-container mb-3 text-start'>
                 {
                     myItems.map(item => <MyItem

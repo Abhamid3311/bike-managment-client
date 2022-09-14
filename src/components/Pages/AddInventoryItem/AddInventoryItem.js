@@ -27,28 +27,30 @@ const AddInventoryItem = () => {
             })
     };
     return (
-        <div className='w-50 mx-auto m-5'>
+        <div className='bg-dark  py-3'>
+            <div className='w-50 mx-auto p-3 shadow-lg rounded bg-white my-5'>
 
-            <h2 className='text-center '>Add a New Bike</h2>
-            <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
+                <h2 className='text-center fw-bold fs-1 text-success py-3'>Add A New Bike</h2>
+                <form className='d-flex flex-column ' onSubmit={handleSubmit(onSubmit)}>
 
-                <input required className='mb-3 form-control' value={user?.email} type="email" {...register("email")} disabled />
+                    <input required className='mb-3 form-control' value={user?.email} type="email" {...register("email")} disabled />
 
-                <input className='mb-3 form-control' placeholder='enter bike name' {...register("name", { required: true, maxLength: 20 })} />
+                    <input className='mb-3 form-control' placeholder='Enter bike name' {...register("name", { required: true, maxLength: 20 })} />
 
-                <input className='mb-3 form-control' placeholder='enter manufecturer name' {...register("manufecturer", { required: true, maxLength: 20 })} />
+                    <input className='mb-3 form-control' placeholder='Enter manufecturer name' {...register("manufecturer", { required: true, maxLength: 20 })} />
 
-                <textarea required className='mb-3 form-control' placeholder='enter bike description' {...register("Description")} />
+                    <input required className='mb-3 form-control' placeholder='Price' type="number" {...register("price")} />
 
-                <input required className='mb-3 form-control' placeholder='price' type="number" {...register("price")} />
+                    <input required className='mb-3 form-control' placeholder='Quantity' type="number" {...register("quantity")} />
 
-                <input required className='mb-3 form-control' placeholder='quantity' type="number" {...register("quantity")} />
+                    <input required className='mb-3 form-control' placeholder='Photo URL' type="text" {...register("img")} />
 
-                <input required className='mb-3 form-control' placeholder='Photo URL' type="text" {...register("img")} />
+                    <textarea required className='mb-3 form-control' placeholder='Enter bike description' {...register("Description")} />
 
 
-                <input type="submit" value='Add Item' className=' btn btn-success' />
-            </form>
+                    <input type="submit" value='Add Item' className=' btn btn-success' />
+                </form>
+            </div>
         </div>
     );
 };

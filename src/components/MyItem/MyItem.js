@@ -6,7 +6,7 @@ const MyItem = ({ item, handleDeleteBtn }) => {
     const { _id, name, img, manufecturer, price, Description, quantity, email } = item;
     return (
         <div>
-            <Card className='bike-card'>
+            <Card className='bike-card '>
                 <Card.Img variant="top" src={img} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>

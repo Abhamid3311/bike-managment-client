@@ -65,13 +65,13 @@ const Banner = () => {
                 }}
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper "
+                className="mySwiper"
             >
                 {
                     swiperSlideDetails.map(slide => <SwiperSlide>
                         <div class="row d-flex d-block h-100 w-100 text-white bg-slide py-5">
 
-                            <div class="col-12 col-lg-7 col-md-12 col-sm-12 mt-5 text-start px-5 ">
+                            <div class="col-12 col-lg-6 col-md-12 col-sm-12 mt-5 text-start px-5 ">
                                 <h1 class="fw-bold fs-1 ms-2 text-danger">{slide.headline}</h1>
                                 <p class="ms-2">{slide.desc}</p>
 
@@ -83,7 +83,7 @@ const Banner = () => {
                                 <button onClick={handleexploreBtn} class="btn btn-outline-success ms-2 mt-4 btn-lg">Explore Now </button>
                             </div>
 
-                            <div class="col-12 col-lg-5 col-md-12 col-sm-12 ">
+                            <div class="col-12 col-lg-6 col-md-12 col-sm-12 ">
                                 <img src={slide.img} class="img-fluid" width="402px" height="378px" alt='' />
                             </div>
                         </div>

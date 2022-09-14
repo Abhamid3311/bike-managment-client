@@ -63,7 +63,9 @@ const AllInventory = () => {
                     </tbody>
                 </Table>
             </div>
-            <button className='btn-primary btn btn-lg' onClick={handleAddItem}>Add New Bike</button>
+            <button className='btn-primary btn btn-lg ' onClick={handleAddItem}>Add New Bike</button>
+
+            <img src={"https://i.ibb.co/gZjptVv/suzuki-motul-engine-oil.jpg"} alt="" srcset="" className='img-fluid my-4' />
         </div>
     );
 };

@@ -46,7 +46,7 @@ const Services = () => {
 
                 {
                     serviceCard.map(service => <Card border="success bg-dark">
-                        <Card.Header className='text-center fs-1 text-warning'>
+                        <Card.Header className='text-center fs-1 text-success'>
                             <FontAwesomeIcon icon={service.icon} />
                             <Card.Title className='text-danger text-center mt-2'>{service.name}
                             </Card.Title>
@@ -59,6 +59,7 @@ const Services = () => {
                     </Card>)
                 }
             </div>
+            <img src={"https://i.ibb.co/4R6NCZ1/footer-image-159048975448445.jpg"} alt="" className='img-fluid'/>
         </div>
     );
 };
