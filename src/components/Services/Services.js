@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThumbsUp, faCheckSquare, faUserClock,faTaxi,faStar,faShield} from '@fortawesome/free-solid-svg-icons';
+import { faThumbsUp, faCheckSquare, faUserClock, faTaxi, faStar, faShield } from '@fortawesome/free-solid-svg-icons';
 import { Card } from 'react-bootstrap';
 import './Service.css';
 
@@ -34,11 +34,11 @@ const Services = () => {
         {
             name: "Home Delivery",
             details: " We offer a program that provides incentives to everyone to help grow and maintain a healthy agency.",
-            icon:  faTaxi
+            icon: faTaxi
         },
     ];
 
-   
+
     return (
         <div >
             <h1 className='text-center text-success my-5'> Reasons <span className='text-danger'>To Stay</span> With Us</h1>
@@ -48,11 +48,10 @@ const Services = () => {
                     serviceCard.map(service => <Card border="success bg-dark">
                         <Card.Header className='text-center fs-1 text-warning'>
                             <FontAwesomeIcon icon={service.icon} />
-                            
+                            <Card.Title className='text-danger text-center mt-2'>{service.name}
+                            </Card.Title>
                         </Card.Header>
                         <Card.Body>
-                            <Card.Title className='text-danger text-center'>{service.name}
-                            </Card.Title>
                             <Card.Text >
                                 {service.details}
                             </Card.Text>
