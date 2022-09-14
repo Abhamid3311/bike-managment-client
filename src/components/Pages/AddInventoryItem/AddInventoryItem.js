@@ -28,7 +28,7 @@ const AddInventoryItem = () => {
     };
     return (
         <div className='bg-dark  py-3'>
-            <div className='w-50 mx-auto p-3 shadow-lg rounded bg-white my-5'>
+            <div className=' w-50  mx-auto p-3 shadow-lg rounded bg-white my-5'>
 
                 <h2 className='text-center fw-bold fs-1 text-success py-3'>Add A New Bike</h2>
                 <form className='d-flex flex-column ' onSubmit={handleSubmit(onSubmit)}>
